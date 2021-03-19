@@ -25,8 +25,10 @@ namespace Password
         {
             InitializeComponent();
         }
-        public void Window_Closing(object sender, CancelEventArgs e)
+
+        private void Window_Closing_1(object sender, CancelEventArgs e)
         {
+            e.Cancel = true;
         }
     }
 }

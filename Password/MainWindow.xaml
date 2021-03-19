@@ -5,12 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Password"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Closing="Window_Closing_1">
     <Grid>
-        <Label Content="Username" HorizontalAlignment="Left" Margin="130,71,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.894,4.388" Height="23"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="130,117,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.719,0.661" Height="23"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="245,71,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="342" RenderTransformOrigin="-0.001,0.857"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="245,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="342" AutomationProperties.IsOffscreenBehavior="Onscreen"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="83*"/>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="181*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Username" HorizontalAlignment="Left" Margin="130,71,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.894,4.388" Height="23" Width="63"/>
+        <Label Content="Password" HorizontalAlignment="Left" Margin="130,117,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.719,0.661" Height="23" Width="60"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="0,71,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="342" RenderTransformOrigin="-0.001,0.857" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="0,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="342" AutomationProperties.IsOffscreenBehavior="Onscreen" Grid.ColumnSpan="2" Grid.Column="1"/>
 
     </Grid>
 </Window>
