@@ -37,12 +37,25 @@ namespace Password
             if (Heslo.Text.Length >= 6 && Heslo.Text.Any(char.IsDigit))
             {
                 validPassword = true;
-                MessageBox.Show("Now you can close this application");
+                MessageBox.Show("Congratulations .Now you can close this application.");
             }
-            else if (Heslo.Text.Length < 6)
-                MessageBox.Show("Password is too short. Needs to contain at least 6 characters.");
-            else if (Heslo.Text.Any(char.IsDigit))
-                MessageBox.Show("Password needs to contain at least one number.");
+
+            else if (Heslo.Text.Length < 6 && Heslo.Text.Any(char.IsDigit))
+            {
+                MessageBox.Show("Password is too short. Must contain at least 6 characters.");
+                validPassword = false;
+            }
+
+            else if (Heslo.Text.Length >= 6 && !Heslo.Text.Any(char.IsDigit))
+            {
+                MessageBox.Show("Password must contain at least one number.");
+                validPassword = false;
+            }
+            else
+            {
+                MessageBox.Show("Password must contain at least 6 characters and one of them must be a number");
+                validPassword = false;
+            }    
         }
 
     }
