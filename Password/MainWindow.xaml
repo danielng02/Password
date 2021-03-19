@@ -14,8 +14,9 @@
         </Grid.ColumnDefinitions>
         <Label Content="Username" HorizontalAlignment="Left" Margin="130,71,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.894,4.388" Height="23" Width="63"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="130,117,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.719,0.661" Height="23" Width="60"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="0,71,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="342" RenderTransformOrigin="-0.001,0.857" Grid.ColumnSpan="2" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="0,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="342" AutomationProperties.IsOffscreenBehavior="Onscreen" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="0,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="342" RenderTransformOrigin="-0.001,0.857" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <TextBox x:Name="Heslo" HorizontalAlignment="Left" Height="23" Margin="0,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="342" AutomationProperties.IsOffscreenBehavior="Onscreen" Grid.ColumnSpan="2" Grid.Column="1" SpellCheck.IsEnabled="True"/>
+        <Button Content="Submit" Grid.Column="2" HorizontalAlignment="Left" Margin="127,204,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
 
     </Grid>
 </Window>

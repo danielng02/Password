@@ -25,10 +25,25 @@ namespace Password
         {
             InitializeComponent();
         }
-
+        bool validPassword = false;
         private void Window_Closing_1(object sender, CancelEventArgs e)
         {
-            e.Cancel = true;
+            if(!validPassword)
+                e.Cancel = true;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (Heslo.Text.Length >= 6 && Heslo.Text.Any(char.IsDigit))
+            {
+                validPassword = true;
+                MessageBox.Show("Now you can close this application");
+            }
+            else if (Heslo.Text.Length < 6)
+                MessageBox.Show("Password is too short. Needs to contain at least 6 characters.");
+            else if (Heslo.Text.Any(char.IsDigit))
+                MessageBox.Show("Password needs to contain at least one number.");
+        }
+
     }
 }
